@@ -32,7 +32,7 @@ public class JdbcDemoApplication implements CommandLineRunner {
     public void run(final String... args) throws Exception {
 	// testJDBCDao()
 	testJDBCDao_WithMapper();
-	testJDBCRepository();
+	testJDBC_Repository();
     }
 
     private void testJDBCDao() {
@@ -78,6 +78,10 @@ public class JdbcDemoApplication implements CommandLineRunner {
     }
 
     private void testJDBC_Repository() {
+	
+	/* Find all Persons */
+	System.err.println(personJDBCRepository.findAll());
+	
 
     }
 

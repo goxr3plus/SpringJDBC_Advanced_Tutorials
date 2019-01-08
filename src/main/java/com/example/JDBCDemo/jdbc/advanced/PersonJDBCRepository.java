@@ -11,7 +11,7 @@ import com.example.JDBCDemo.jdbc.mapper.PersonMapper;
 @Component
 public class PersonJDBCRepository extends AbstractJdbcRepository {
 
-    public List<Person> getAllPersons() {
+    public List<Person> findAll() {
 
 	final MapSqlParameterSource sqlParameterSource = new MapSqlParameterSource();
 
