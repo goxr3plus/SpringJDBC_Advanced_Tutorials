@@ -31,20 +31,20 @@ public class JdbcDemoApplication implements CommandLineRunner {
     @Override
     public void run(final String... args) throws Exception {
 	// testJDBCDao()
-	testJDBCDao_WithMapper();
+	//testJDBCDao_WithMapper();
 	testJDBC_Repository();
     }
 
     private void testJDBCDao() {
+
+	/* Find all Persons */
+	System.err.println(personJDBCDao.findAll());
 
 	/* Find Person by ID */
 	System.err.println(personJDBCDao.findById(1001));
 
 	/* Delete Person by ID */
 	System.err.println(personJDBCDao.deleteById(1002));
-
-	/* Find all Persons */
-	System.err.println(personJDBCDao.findAll());
 
 	/* Insert a new Person */
 	Person person = new Person(50, "LAPLACE", "AFRICA", LocalDateTime.now());
@@ -58,14 +58,14 @@ public class JdbcDemoApplication implements CommandLineRunner {
 
     private void testJDBCDao_WithMapper() {
 
+	/* Find all Persons */
+	System.err.println(personJDBCDaoWithMapper.findAll());
+
 	/* Find Person by ID */
 	System.err.println(personJDBCDaoWithMapper.findById(1001));
 
 	/* Delete Person by ID */
 	System.err.println(personJDBCDaoWithMapper.deleteById(1002));
-
-	/* Find all Persons */
-	System.err.println(personJDBCDaoWithMapper.findAll());
 
 	/* Insert a new Person */
 	Person person = new Person(50, "LAPLACE", "AFRICA", LocalDateTime.now());
@@ -78,10 +78,23 @@ public class JdbcDemoApplication implements CommandLineRunner {
     }
 
     private void testJDBC_Repository() {
-	
+
 	/* Find all Persons */
 	System.err.println(personJDBCRepository.findAll());
-	
+
+	/* Find Person by ID */
+	System.err.println(personJDBCRepository.findById(1001));
+
+	/* Delete Person by ID */
+	System.err.println(personJDBCRepository.deleteById(1002));
+
+	/* Insert a new Person */
+	Person person = new Person(50, "LAPLACE", "AFRICA", LocalDateTime.now());
+	System.out.println(personJDBCRepository.insert(new Person(50, "LAPLACE", "AFRICA", LocalDateTime.now())));
+
+	/* Update Person */
+	person.setLocation("Nevada");
+	System.out.println(personJDBCRepository.update(person));
 
     }
 
