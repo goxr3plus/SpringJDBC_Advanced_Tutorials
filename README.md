@@ -12,6 +12,7 @@ This repository contains code for the following :
    
 This repository was based on [hibernate-jpa-tutorial-for-beginners-in-100-steps](https://www.udemy.com/hibernate-jpa-tutorial-for-beginners-in-100-steps/) and my personal working experience :)
 
+---
 
 Example for bullet (1) : 
 
@@ -64,6 +65,8 @@ public class PersonJDBCDao {
 }
 
 ```
+
+---
 
 Example for bullet (3):
 
