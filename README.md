@@ -14,6 +14,7 @@ This repository was based on [hibernate-jpa-tutorial-for-beginners-in-100-steps]
 
 
 Example for bullet (1) : 
+
 Using JDBC Template for all basic CRUD operations [(no custom mappers)](https://github.com/goxr3plus/SpringJDBC_Advanced_Tutorials/blob/master/src/main/java/com/example/JDBCDemo/jdbc/PersonJDBCDao.java)
 
 
@@ -65,6 +66,7 @@ public class PersonJDBCDao {
 ```
 
 Example for bullet (3):
+
 Using JDBC Template for all basic CRUD operations 
    [**loading sql commands from a *sql.properties* file using a custom class**](https://github.com/goxr3plus/SpringJDBC_Advanced_Tutorials/blob/master/src/main/java/com/example/JDBCDemo/jdbc/advanced/PersonJDBCRepository.java)
 
